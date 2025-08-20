@@ -34,7 +34,8 @@
 
       /* 크기 */
       html {
-        font-size: 4px; /* 이건 고정 */
+        /* font-size: 4px; */
+        font-size: 16px; /* 이건 고정 */
       }
       .sizes {
         font-size: 8px; /* 다른 곳에서 수정을 했는데 */
@@ -56,6 +57,21 @@
       }
       .percent {
         font-size: 500%;
+      }
+
+      /* em vs rem */
+      .parent {
+        font-size: 20px;
+        background: #f9f9f9;
+        padding: 8px;
+      }
+      .child-em {
+        font-size: 2em;
+        padding: 2em;
+      }
+      .child-rem {
+        font-size: 2rem;
+        padding: 2rem;
       }
     </style>
   </head>
@@ -88,6 +104,15 @@
       <p class="em">em 상대크기</p>
       <p class="rem">rem html기준</p>
       <p class="percent">% 부모대비</p>
+    </div>
+
+    <div>
+      <h2>em과 rem</h2>
+      <div class="parent">
+        부모(.parent) font-size: 20px
+        <p class="child-em">2em - 40px</p>
+        <p class="child-rem">2rem - 32px</p>
+      </div>
     </div>
 
     <br />
