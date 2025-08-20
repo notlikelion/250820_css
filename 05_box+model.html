@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOX Model</title>
+    <style>
+      .demo {
+        background: white;
+        /* border(외곽선): 두께 모양 색상 */
+        border: 1px solid gray;
+        /* top right bottom left : 시계 방향 */
+        /* 위 오른쪽 아래 왼쪽 */
+        margin-bottom: 40px;
+        padding: 20px;
+      }
+
+      .box {
+        /* div */
+        /* block? -> 한 줄을 모두 가지는... */
+        /* inline -> 부분적으로만 적용 받음 */
+        width: 200px;
+        height: 100px;
+        /* background: lightblue; */
+        background-color: lightblue;
+        border: 5px solid navy; /* 기본설정은 내부 content의 크기는 유지하고, border가 추가된다 */
+        padding: 20px; /* 전방향 */
+        margin: 20px; /* 전방향 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo">
+      <h2>기본 박스모델</h2>
+      <div class="box">콘텐츠</div>
+      <ul>
+        <li>content</li>
+        <li>padding</li>
+        <li>border</li>
+        <li>margin</li>
+      </ul>
+    </div>
+  </body>
+</html>
