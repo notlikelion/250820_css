@@ -27,6 +27,16 @@
         padding: 20px; /* 전방향 */
         margin: 20px; /* 전방향 */
       }
+
+      .collapse p {
+        background: lightgreen;
+        /* margin, padding : 1개 전체 적용
+        margin : x y -> 세로로 x만큼, 가로로 y만큼
+        4개를 넣으면 top부터 상,우,하,좌...
+        */
+        /* margin: 20px 0; */
+        padding: 20px 0;
+      }
     </style>
   </head>
   <body>
@@ -39,6 +49,14 @@
         <li>border</li>
         <li>margin</li>
       </ul>
+    </div>
+
+    <div class="demo collapse">
+      <h2>마진 충돌</h2>
+      <p>단락1</p>
+      <p>단락2</p>
+      <p>단락3</p>
+      <p>상쇄 되는지 보세요</p>
     </div>
   </body>
 </html>
