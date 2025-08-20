@@ -45,6 +45,28 @@
       a[target="_blank"] {
         text-decoration: underline;
       }
+
+      /* 결합자 */
+      .section {
+        border: 1px solid black;
+      }
+      .section .note {
+        color: grey;
+      } /* 소속된 모든 요소 (꼭 바로 소속된게 아니더라도... 해당 선택자에 속하기만 해도...) */
+      .section > .note {
+        background-color: lightyellow;
+      } /* 바로 속한 경우 -> 중간에 감싸는 것이 있다면 적용 안됨 */
+      h3 + p {
+        font-style: italic;
+        font-weight: bold;
+      }
+      h3 ~ p {
+        border-top: 1px dashed black; /* font-style을 뒤집어 씌움 */
+      }
+      h3,
+      p {
+        font-size: 24px;
+      }
     </style>
   </head>
   <body>
@@ -72,5 +94,18 @@
       <a href="https://naver.com" target="_blank">네이버 새 창 링크</a>
       <a href="https://naver.com" target="_self">네이버 현재 탭(창) 바꾸기</a>
     </p>
+
+    <!-- 감싸줄 때 쓴다 -->
+    <section class="section">
+      <div class="note">나는 .section의 자식(하위, 바로 직계인 경우) .note</div>
+      <div>
+        <div class="note">
+          나는 .section의 자손(바로 직계가 아닌 경우) .note
+        </div>
+      </div>
+      <h3>제목</h3>
+      <p>이 단락은 h3 바로 다음</p>
+      <p>이 단락은 h3 뒤쪽 모든 형제(~, 같은 요소 소속인 요소들)</p>
+    </section>
   </body>
 </html>
