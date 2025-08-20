@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상속</title>
+    <style>
+      /* 내부 스타일시트 문법 작성 예정 */
+      body {
+        /* font-family: sans-serif;
+        font-size: 16px; */
+        color: #333; /* 색상을 16진수 0~f(abcdef) */
+        line-height: 1.6; /* 160% */
+      }
+
+      /* 상속 실습 */
+      .ancestor {
+        color: green;
+        font-size: 18px;
+      }
+      .child {
+        color: blue;
+      }
+      .grandchild {
+        color: red;
+      }
+      .ancestor-box {
+        border: 2px solid orange;
+        padding: 10px;
+      }
+      .child-box {
+        border: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div : 구분된 블록을 하나 만들어줌 (한 줄을 다 추가) -->
+    <!-- <div></div> -->
+    상속 상속
+    <div>상속</div>
+    <div>상속</div>
+    <p>위아래 여백이 있음</p>
+    <p>위아래 여백이 있음</p>
+    <!-- emmet 약어 : div.ancestor>div.child>div.grandchild -->
+    <!-- lorem -->
+    <div class="ancestor">
+      조상 div (.ancestor)
+      <div class="child">
+        자식 div (.child)
+        <div class="grandchild">손자 div (.grandchild)</div>
+      </div>
+    </div>
+
+    <!-- div.ancestor-box{border 속성은 상속되지 않음}>div.child-box{자식 div엔 border 없음} -->
+    <div class="ancestor-box">
+      border 속성은 상속되지 않음
+      <div class="child-box">자식 div엔 border 없음</div>
+    </div>
+
+    <div class="sizes">
+      <p class="px">px 절대크기</p>
+      <p class="em">em 상대크기</p>
+      <p class="rem">rem html기준</p>
+      <p class="percent">% 부모대비</p>
+    </div>
+  </body>
+</html>
