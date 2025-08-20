@@ -25,6 +25,26 @@
       strong {
         color: pink;
       }
+
+      input {
+        font-size: 24px;
+      }
+      input {
+        font-size: 48px; /* 같은 우선도면 뒤에 나오는게 덮어씀 */
+      }
+      input[type="password"] {
+        font-size: 18px;
+      }
+      a {
+        text-decoration: none;
+      }
+      a[href="https://naver.com"]
+      {
+        text-decoration: line-through;
+      }
+      a[target="_blank"] {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
@@ -38,5 +58,19 @@
     <h6 class="lead">재사용했습니다~</h6>
     <p class="alert">경고 경고~</p>
     <strong>정말 쎄보이게 하고 싶다</strong>
+    <br />
+    <label>
+      <input type="text" placeholder="아이디" />
+    </label>
+    <label>
+      <input type="password" placeholder="비밀번호" />
+      <input type="password" placeholder="비밀번호" />
+      <input type="password" placeholder="비밀번호" />
+    </label>
+    <p>
+      <!-- _blank : 새 창 띄우기 -->
+      <a href="https://naver.com" target="_blank">네이버 새 창 링크</a>
+      <a href="https://naver.com" target="_self">네이버 현재 탭(창) 바꾸기</a>
+    </p>
   </body>
 </html>
