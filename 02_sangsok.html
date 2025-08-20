@@ -31,6 +31,32 @@
       .child-box {
         border: 2px solid blue;
       }
+
+      /* 크기 */
+      html {
+        font-size: 4px; /* 이건 고정 */
+      }
+      .sizes {
+        font-size: 8px; /* 다른 곳에서 수정을 했는데 */
+      }
+      .sizes p {
+        margin: 0.3em 0; /* 위아래에 0.3em, 오른쪽왼쪽 0 */
+      }
+      .px {
+        font-size: 24px;
+      }
+      .em {
+        /* em : 부모에게 상속받은 사이즈 */
+        font-size: 2em; /* 직전 부모 사이즈 x2*/
+        /* .sizes -> 8px -> 16px */
+      }
+      .rem {
+        /* html : 모든 것의 최상위 root. :root -> em */
+        font-size: 1.5rem;
+      }
+      .percent {
+        font-size: 500%;
+      }
     </style>
   </head>
   <body>
@@ -63,5 +89,11 @@
       <p class="rem">rem html기준</p>
       <p class="percent">% 부모대비</p>
     </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </body>
 </html>
