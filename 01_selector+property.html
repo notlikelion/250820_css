@@ -68,6 +68,7 @@
         font-size: 24px;
       }
     </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- css -> 선택. HTML <-> 별도로 존재가 가능 -->
@@ -107,5 +108,20 @@
       <p>이 단락은 h3 바로 다음</p>
       <p>이 단락은 h3 뒤쪽 모든 형제(~, 같은 요소 소속인 요소들)</p>
     </section>
+
+    <ul>
+      <li>
+        내부 스타일시트 :&lt;head&gt; 안에 &lt;style&gt;를 입력해서 선택자와
+        함께 표시하는 방법
+      </li>
+      <li style="color: red">
+        인라인 : 유지보수가 안 좋아서 진짜 디버깅이나 옛날 개발에나 쓰이는
+        방식<br />
+        - style="color: red"<br />
+        - 적용되는 명시도, 특이도가 높아서 거의 무조건 적용됨<br />
+        - 급하게 수정할 때 진짜 좋은 방식
+      </li>
+      <li>외부 스타일시트</li>
+    </ul>
   </body>
 </html>
